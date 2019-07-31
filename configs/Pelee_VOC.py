@@ -19,8 +19,8 @@ model = dict(
     ),
     num_classes=21,
     save_epochs=10,
-    weights_save='weights/',
-    pretained_model='weights/peleenet.pth'
+    weights_save='/workspace/raid/data/jgusak/Pelee.Pytorch/weights/',
+    pretained_model='/workspace/raid/data/jgusak/Pelee.Pytorch/weights/peleenet.pth'
 )
 
 train_cfg = dict(
@@ -41,7 +41,7 @@ test_cfg = dict(
     soft_nms=True,
     score_threshold=0.01,
     keep_per_class=200,
-    save_folder='eval',
+    save_folder='/workspace/raid/data/jgusak/Pelee.Pytorch/eval',
 )
 
 loss = dict(overlap_thresh=0.5,
@@ -67,6 +67,10 @@ dataset = dict(
 )
 
 import os
-home = os.path.expanduser("~")
-VOCroot = os.path.join(home, "data/VOCdevkit/")
-COCOroot = os.path.join(home, "data/coco/")
+# home = os.path.expanduser("~")
+# VOCroot = os.path.join(home, "data/VOCdevkit/")
+# COCOroot = os.path.join(home, "data/coco/")
+
+home = os.path.expanduser("/workspace/home/jgusak/Pelee.Pytorch")
+VOCroot = os.path.join(home, "/workspace/raid/data/datasets/voc/VOCdevkit/")
+COCOroot = os.path.join(home, "/workspace/raid/data/datasets/COCO/")

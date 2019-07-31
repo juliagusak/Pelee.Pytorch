@@ -41,7 +41,7 @@ def get_min_max_sizes(min_ratio, max_ratio, input_size, mbox_source_num):
     step = int(math.floor(max_ratio - min_ratio) / (mbox_source_num - 2))
     min_sizes = list()
     max_sizes = list()
-    for ratio in xrange(min_ratio, max_ratio + 1, step):
+    for ratio in range(min_ratio, max_ratio + 1, step):
         min_sizes.append(input_size * ratio / 100)
         max_sizes.append(input_size * (ratio + step) / 100)
 

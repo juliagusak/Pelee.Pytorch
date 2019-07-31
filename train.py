@@ -76,7 +76,7 @@ if __name__ == '__main__':
         if start_iter > step:
             step_index += 1
 
-    for iteration in xrange(start_iter, max_iter):
+    for iteration in range(start_iter, max_iter):
         if iteration % epoch_size == 0:
             batch_iterator = iter(data.DataLoader(dataset,
                                                   cfg.train_cfg.per_batch_size * args.ngpu,
